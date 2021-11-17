@@ -1,0 +1,12 @@
+h1 {
+  color: pink;
+}
+.header-bg {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  /* position: absolute; */
+  margin: -8px;
+  padding: 1em;
+  left: -8px;
+}
