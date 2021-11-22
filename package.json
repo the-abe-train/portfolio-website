@@ -2,7 +2,7 @@
   "name": "portfolio-website",
   "version": "1.0.0",
   "description": "Abe's portfolio website.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "dev": "nodemon"
   },
@@ -20,5 +20,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "livereload": "^0.9.3"
   }
 }

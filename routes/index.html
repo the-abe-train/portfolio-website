@@ -6,21 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.5.1/dist/cdn.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/9e45c53392.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <div class="header-bg">
-        <span>World class developer</span>
+    <nav>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#Socials">Socials</a></li>
+      </ul>
+    </nav>
+    <section id="banner-section">
+      <div id="banner-left">
+        <h1><span class="small-header">The</span> Abe Train</h1>
+        <p>Hey there! Thanks for coming to my website.</p>
+        <p>
+          I am a <a href="#">cloud certified</a>
+          <b>Full-stack Web Developer</b>. That means I design and develop web
+          apps from the ground up to reach people all over the world. I'm always
+          open to new challenges. Let's connect!
+        </p>
+        <div id="banner-btns">
+          <button id="contact">
+            <span class="btn-header">Contact</span> <br />
+            <span>to hire or collab</span>
+          </button>
+          <button id="subscribe">
+            <span class="btn-header">Subscribe</span> <br />
+            <span>to mailing list</span>
+          </button>
+        </div>
       </div>
-    </header>
-    <h1>Portfolio website</h1>
-    <h2>test</h2>
-    <div x-data="{ open: false }">
-      <button @click="open = true">Expand</button>
+      <!-- <div id="banner-right"> -->
+      <span class="icon-span icon-line" id="server">
+        <i class="fas fa-server"></i>
+        <span class="icon-name">Server</span>
+      </span>
+      <span class="icon-span icon-line">
+        <i class="fas fa-desktop"></i>
+        <span class="icon-name">Desktop</span>
+      </span>
+      <span class="icon-span icon-line">
+        <i class="fas fa-database"></i>
+        <span class="icon-name">Database</span>
+      </span>
+      <!-- </div> -->
 
-      <span x-show="open"> Content... </span>
-    </div>
-    <script src="index.js"></script>
+      <span class="icon-span" id="train" x-data="{show: false}" x-show="show">
+        <i class="fas fa-train"></i>
+      </span>
+
+    </section>
+    <img
+      class="section-break"
+      src="images/squiggle.svg"
+      alt="squiggly line"
+      width="100%"
+    />
+    <section id="portfolio-section">
+      <h2>Portfolio</h2>
+    </section>
   </body>
 </html>
