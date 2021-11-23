@@ -7,10 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script
-      defer
-      src="https://unpkg.com/alpinejs@3.5.1/dist/cdn.min.js"
-    ></script>
-    <script
       src="https://kit.fontawesome.com/9e45c53392.js"
       crossorigin="anonymous"
     ></script>
@@ -25,45 +21,91 @@
       </ul>
     </nav>
     <section id="banner-section">
-      <div id="banner-left">
-        <h1><span class="small-header">The</span> Abe Train</h1>
-        <p>Hey there! Thanks for coming to my website.</p>
-        <p>
-          I am a <a href="#">cloud certified</a>
-          <b>Full-stack Web Developer</b>. That means I design and develop web
-          apps from the ground up to reach people all over the world. I'm always
-          open to new challenges. Let's connect!
-        </p>
-        <div id="banner-btns">
-          <button id="contact">
-            <span class="btn-header">Contact</span> <br />
-            <span>to hire or collab</span>
-          </button>
-          <button id="subscribe">
-            <span class="btn-header">Subscribe</span> <br />
-            <span>to mailing list</span>
-          </button>
+      <h1><span class="small-header">The</span> Abe Train</h1>
+      <div class="banner-grid">
+        <div id="banner-left">
+          <p>Hey there! Thanks for coming to my website 👋</p>
+          <p>
+            I'm a <a href="#">cloud certified</a>
+            <b>Full-stack Web Developer</b>. That means I design and develop web
+            apps from the ground up to reach people all over the world. I'm
+            always open to new challenges. Let's connect!
+          </p>
+          <div id="banner-btns">
+            <button id="contact">
+              <span class="btn-header">Contact</span> <br />
+              <span>to hire or collab</span>
+            </button>
+            <button id="subscribe">
+              <span class="btn-header">Subscribe</span> <br />
+              <span>to mailing list</span>
+            </button>
+          </div>
+        </div>
+        <div id="train-column">
+          <img
+            class="train-tracks"
+            src="images/train tracks 2.svg"
+            alt="train tracks"
+          />
+          <div class="icon-span" id="train-div">
+            <i class="fas fa-train" id="train-icon"></i>
+            <div id="train-bg"></div>
+          </div>
+        </div>
+        <span class="icon-span icon-line" id="server">
+          <i class="fas fa-server"></i>
+          <span class="icon-name">Server</span>
+        </span>
+        <span class="icon-span icon-line">
+          <i class="fas fa-desktop"></i>
+          <span class="icon-name">Desktop</span>
+        </span>
+        <span class="icon-span icon-line">
+          <i class="fas fa-database"></i>
+          <span class="icon-name">Database</span>
+        </span>
+      </div>
+    </section>
+
+    <img
+      class="section-break"
+      src="images/squiggle.svg"
+      alt="squiggly line"
+      width="100%"
+    />
+
+    <section id="portfolio-section">
+      <h2>Portfolio</h2>
+      <h3 class="project-title">Spotify Prewrapped</h3>
+      <div class="portoflio-section">
+        <img src="images/spotify.png" alt="spotify logo" class="project-logo" />
+        <div class="project-details">
+          <b>
+            <p class="project-subtitle">
+              Don't wait for Spotify Wrapped to find out your most listened to
+              tracks and artists!
+            </p>
+          </b>
+          <p class="project-description">
+            This was the first project I built as a solo web developer. In spite
+            of the simple output, I'm really proud of the result and I encourage
+            everyone to use and share it!
+          </p>
+        </div>
+        <div class="project-technologies">
+          <h4>Technologies</h4>
+          <div class="tech-logos">
+            <img src="images/svelte.png" alt="svelte logo" class="tech-logo" />
+            <img src="images/vercel.png" alt="vercel logo" class="tech-logo" />
+            <img
+              src="images/spotify.png"
+              alt="spotify logo"
+              class="tech-logo"
+            />
+          </div>
         </div>
       </div>
-      <!-- <div id="banner-right"> -->
-      <span class="icon-span icon-line" id="server">
-        <i class="fas fa-server"></i>
-        <span class="icon-name">Server</span>
-      </span>
-      <span class="icon-span icon-line">
-        <i class="fas fa-desktop"></i>
-        <span class="icon-name">Desktop</span>
-      </span>
-      <span class="icon-span icon-line">
-        <i class="fas fa-database"></i>
-        <span class="icon-name">Database</span>
-      </span>
-      <!-- </div> -->
-
-      <span class="icon-span" id="train" x-data="{show: false}" x-show="show">
-        <i class="fas fa-train"></i>
-      </span>
-
     </section>
     <img
       class="section-break"
@@ -71,8 +113,5 @@
       alt="squiggly line"
       width="100%"
     />
-    <section id="portfolio-section">
-      <h2>Portfolio</h2>
-    </section>
   </body>
 </html>
