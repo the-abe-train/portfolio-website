@@ -13,21 +13,26 @@
   </head>
   <body>
     <nav>
-      <ul>
+      <ul id="nav-list">
         <li title="Home"><a href="#Home">Home</a></li>
         <li title="Portfolio"><a href="#Portfolio">Portfolio</a></li>
-        <li><a href="#Experience">Experience</a></li>
-        <li><a href="#Socials">Socials</a></li>
+        <li title="Experience"><a href="#Experience">Experience</a></li>
+        <li title="Socials"><a href="#Socials">Socials</a></li>
       </ul>
     </nav>
-    <section id="banner-section">
+    <section id="Home">
       <h1><span class="small-header">The</span> Abe Train</h1>
       <div class="banner-grid">
         <div id="banner-left">
           <div class="banner-left-text">
             <p>Hey there! Thanks for coming to my website 👋</p>
             <p>
-              I'm a <a href="#">cloud certified</a>
+              I'm a
+              <a
+                href="https://www.credly.com/badges/bc1d5730-f739-44ad-8024-b717f036cb56/public_url"
+                target="_blank"
+                >cloud certified</a
+              >
               <b>Full-stack Web Developer</b>. That means I design and develop
               web apps from the ground up to reach people all over the world.
               I'm always open to new challenges. Let's connect!
@@ -69,15 +74,7 @@
         </span>
       </div>
     </section>
-
-    <img
-      class="section-break"
-      src="images/squiggle.svg"
-      alt="squiggly line"
-      width="100%"
-    />
-
-    <section id="portfolio-section">
+    <section id="Portfolio">
       <h2>Portfolio</h2>
       <h3 class="project-title">Spotify Prewrapped</h3>
       <div class="portoflio-section">
@@ -109,13 +106,7 @@
         </div>
       </div>
     </section>
-    <img
-      class="section-break"
-      src="images/squiggle.svg"
-      alt="squiggly line"
-      width="100%"
-    />
-    <section id="experience-section">
+    <section id="Experience">
       <h2>Professional Experience</h2>
       <div id="experience-grid">
         <div class="experience-cell">
@@ -131,7 +122,24 @@
           <p>General Motors</p>
         </div>
       </div>
-      <p>Check out my resume for more details.</p>
+      <p>Check out my <a href="#resume">resume</a> for more details.</p>
+    </section>
+    <section id="Socials">
+      <h2 id="socials-title">Socials</h2>
+      <ul class="socials-icons">
+        <li>
+          <span class="icon-span"><i class="fab fa-twitter"></i></span>
+        </li>
+        <li>
+          <span class="icon-span"><i class="fab fa-linkedin"></i></span>
+        </li>
+        <li>
+          <span class="icon-span"><i class="fab fa-github"></i></span>
+        </li>
+        <li>
+          <span class="icon-span"><i class="fab fa-reddit"></i></span>
+        </li>
+      </ul>
     </section>
   </body>
 </html>

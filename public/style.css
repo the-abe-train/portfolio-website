@@ -3,7 +3,7 @@
 :root {
   --train-unit: 2.5rem;
   --w: 100%;
-  --h: 10%;
+  --h: 10.5%;
   --x: 0%;
   --y1: calc(var(--train-unit) * 0.5 + 4px);
   --y2: calc(var(--train-unit) * 3 + 4px);
@@ -11,10 +11,11 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background: radial-gradient(80.99% 100% at 50% 0%, #00ff0a 0%, #36008e 100%),
     radial-gradient(50% 123.47% at 50% 50%, #efe7c8 0%, #36008e 100%),
-    linear-gradient(301.28deg, #ff006b 0%, #48dd9e 100%),
-    linear-gradient(294.84deg, #5a60e4 0%, #d30000 100%),
+    linear-gradient(301.28deg, #ff97c2 0%, #48dd9e 100%),
+    linear-gradient(294.84deg, #5a60e4 0%, #f08c8c 100%),
     linear-gradient(52.29deg, #000000 0%, #00ff85 100%),
     radial-gradient(100% 138.69% at 100% 0%, #0007a5 0%, #ff7a00 100%),
     radial-gradient(70.41% 100% at 50% 0%, #d5b300 0%, #2200aa 100%);
@@ -39,7 +40,7 @@ body {
 
 h1 {
   font-size: 5rem;
-  margin: 0.25em 0 0 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -63,6 +64,10 @@ h4 {
   margin: 1em;
 }
 
+a {
+  color: black;
+}
+
 .section-break {
   display: block;
   margin: 1em auto;
@@ -72,7 +77,7 @@ h4 {
 }
 
 section {
-  margin: 2em 0 5em 0;
+  margin: 1em 0 5em 0;
 }
 
 /* Navbar */
@@ -80,46 +85,42 @@ section {
 nav {
   margin-left: auto;
   margin-right: 0;
+  margin: 1.5em 0 0 auto;
   height: 3em;
 }
 
 ul {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
-  padding: 0.1rem;
-  overflow: hidden;
-  float: right;
+}
+
+#nav-list {
+  justify-content: right;
 }
 
 li {
-  float: left;
-  margin: 0 5px;
+  margin: 0 .75em;
+  text-align: center;
 }
 
-li a {
+/* Underline styles */
+li > a {
   display: block;
-  text-align: center;
-  padding: 0.3rem 0.5rem;
+  position: relative;
+  padding: 0.1em 0;
   text-decoration: none;
 }
 
-li a:visited {
-  color: black;
-  padding: 0.3rem 0.3rem;
+
+li::after {
+  content: attr(title);
+  font-weight: bold;
+  color: transparent;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  font-weight: bolder;
-}
-
-.underline {
-  padding: 0 0.5rem;
-  /* width: 100%; */
-  width: fit-content;
-}
-
-.active {
-  background-color: #04aa6d;
+li > a:hover {
+  font-weight: bold;
 }
 
 /* Banner section */
@@ -151,10 +152,17 @@ li a:hover {
   height: 5em;
   font-family: "NotoSans-SemiBold", "Noto Sans";
   font-weight: 600;
+  background-color: hsla(0, 0%, 100%, 0.548);
+}
+
+#banner-btns button:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
 .btn-header {
   font-size: 1.2rem;
+  
 }
 
 #banner-left {
@@ -163,10 +171,6 @@ li a:hover {
   flex-direction: column;
   justify-content: space-around;
 }
-
-/* #banner-left p {
-  margin: 3em 0;
-} */
 
 #banner-left p a:visited {
   color: black;
@@ -337,7 +341,7 @@ li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  margin: 0 1em;
+  margin: 0 2em;
 }
 
 .experience-cell {
@@ -352,5 +356,15 @@ li a:hover {
 }
 
 .work-logo {
-  height: 4em;
+  height: 5em;
+}
+
+/* Socials */
+#socials-title {
+  text-align: center;
+}
+.socials-icons {
+  margin: 0 auto;
+  justify-content: center;
+  padding: 0;
 }
