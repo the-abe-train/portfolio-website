@@ -13,159 +13,163 @@
     <script defer src="./index.js"></script>
   </head>
   <body>
-    <nav>
-      <ul id="nav-list">
+    <nav class="topnav">
+      <a id="hamburger" href="javascript:void(0);">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul id="nav-list" class="hamburger-closed">
         <li title="Home"><a href="#Home">Home</a></li>
         <li title="Portfolio"><a href="#Portfolio">Portfolio</a></li>
         <li title="Experience"><a href="#Experience">Experience</a></li>
         <li title="Socials"><a href="#Socials">Socials</a></li>
       </ul>
     </nav>
-    <section id="Home">
-      <h1><span class="small-header">The</span> Abe Train</h1>
-      <div class="banner-grid">
-        <div id="banner-left">
-          <div class="banner-left-text">
-            <p>Hey there! Thanks for coming to my website 👋</p>
-            <p>
-              I'm a
-              <a
-                href="https://www.credly.com/badges/bc1d5730-f739-44ad-8024-b717f036cb56/public_url"
-                target="_blank"
-                >cloud certified</a
-              >
-              <b>Full-stack Web Developer</b>. That means I design and develop
-              web apps from the ground up to reach people all over the world.
-              I'm always open to new challenges. Let's connect!
-            </p>
+    <main>
+      <section id="Home">
+        <h1><span class="small-header">The</span> Abe Train</h1>
+        <div class="banner-grid">
+          <div id="banner-left">
+            <div class="banner-left-text">
+              <p>Hey there! Thanks for coming to my website 👋</p>
+              <p>
+                I'm a
+                <a
+                  href="https://www.credly.com/badges/bc1d5730-f739-44ad-8024-b717f036cb56/public_url"
+                  target="_blank"
+                  >cloud certified</a
+                >
+                <b>Full-stack Web Developer</b>. That means I design and develop
+                web apps from the ground up to reach people all over the world.
+                I'm always open to new challenges. Let's connect!
+              </p>
+            </div>
+            <div id="banner-btns">
+              <button id="contact">
+                <span class="btn-header">Contact</span> <br />
+                <span>to hire or collab</span>
+              </button>
+              <button id="subscribe">
+                <span class="btn-header">Subscribe</span> <br />
+                <span>to mailing list</span>
+              </button>
+            </div>
           </div>
-          <div id="banner-btns">
-            <button id="contact">
-              <span class="btn-header">Contact</span> <br />
-              <span>to hire or collab</span>
-            </button>
-            <button id="subscribe">
-              <span class="btn-header">Subscribe</span> <br />
-              <span>to mailing list</span>
-            </button>
-          </div>
-        </div>
-        <div id="train-column">
-          <img
-            class="train-tracks"
-            src="images/train tracks 2.svg"
-            alt="train tracks"
-          />
-          <div class="icon-span" id="train-div">
-            <i class="fas fa-train" id="train-icon"></i>
-            <div id="train-bg"></div>
-          </div>
-        </div>
-        <span class="icon-span icon-line" id="server">
-          <i class="fas fa-server"></i>
-          <span class="icon-name">Server</span>
-        </span>
-        <span class="icon-span icon-line">
-          <i class="fas fa-desktop"></i>
-          <span class="icon-name">Desktop</span>
-        </span>
-        <span class="icon-span icon-line">
-          <i class="fas fa-database"></i>
-          <span class="icon-name">Database</span>
-        </span>
-      </div>
-    </section>
-    <section id="Portfolio">
-      <h2>Portfolio</h2>
-      <h3 class="project-title">Spotify Prewrapped</h3>
-      <div class="portoflio-section">
-        <img src="images/spotify.png" alt="spotify logo" class="project-logo" />
-        <div class="project-details">
-          <b>
-            <p class="project-subtitle">
-              Don't wait for Spotify Wrapped to find out your most listened to
-              tracks and artists!
-            </p>
-          </b>
-          <p class="project-description">
-            This was the first project I built as a solo web developer. In spite
-            of the simple output, I'm really proud of the result and I encourage
-            everyone to use and share it!
-          </p>
-        </div>
-        <div class="project-technologies">
-          <h4>Technologies</h4>
-          <div class="tech-logos">
-            <img src="images/svelte.png" alt="svelte logo" class="tech-logo" />
-            <img src="images/vercel.png" alt="vercel logo" class="tech-logo" />
+          <div id="train-column">
             <img
-              src="images/spotify.png"
-              alt="spotify logo"
-              class="tech-logo"
+              class="train-tracks"
+              src="images/train tracks 2.svg"
+              alt="train tracks"
             />
+            <div class="icon-span" id="train-div">
+              <i class="fas fa-train" id="train-icon"></i>
+              <div id="train-bg"></div>
+            </div>
+          </div>
+          <span class="icon-span icon-line" id="server">
+            <i class="fas fa-server"></i>
+            <span class="icon-name">Server</span>
+          </span>
+          <span class="icon-span icon-line">
+            <i class="fas fa-desktop"></i>
+            <span class="icon-name">Desktop</span>
+          </span>
+          <span class="icon-span icon-line">
+            <i class="fas fa-database"></i>
+            <span class="icon-name">Database</span>
+          </span>
+        </div>
+      </section>
+      <section id="Portfolio">
+        <h2>Portfolio</h2>
+        <div class="portoflio-section">
+          <h3 class="project-title">Spotify Prewrapped</h3>
+          <img src="images/spotify.png" alt="spotify logo" class="project-logo" />
+          <div class="project-details">
+            <b>
+              <p class="project-subtitle">
+                Don't wait for Spotify Wrapped to find out your most listened to
+                tracks and artists!
+              </p>
+            </b>
+            <p class="project-description">
+              This was the first project I built as a solo web developer. In spite
+              of the simple output, I'm really proud of the result and I encourage
+              everyone to use and share it!
+            </p>
+          </div>
+          <div class="project-technologies">
+            <h4>Technologies</h4>
+            <div class="tech-logos">
+              <img src="images/svelte.png" alt="svelte logo" class="tech-logo" />
+              <img src="images/vercel.png" alt="vercel logo" class="tech-logo" />
+              <img
+                src="images/spotify.png"
+                alt="spotify logo"
+                class="tech-logo"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="Experience">
-      <h2>Professional Experience</h2>
-      <div id="experience-grid">
-        <div class="experience-cell">
-          <img class="work-logo" src="images/hf_lime.png" alt="" />
-          <p>HelloFresh</p>
+      </section>
+      <section id="Experience">
+        <h2>Professional Experience</h2>
+        <div id="experience-grid">
+          <div class="experience-cell">
+            <img class="work-logo" src="images/hf_lime.png" alt="" />
+            <p>HelloFresh</p>
+          </div>
+          <div class="experience-cell">
+            <img class="work-logo" src="images/tesla.png" alt="" />
+            <p>Tesla</p>
+          </div>
+          <div class="experience-cell">
+            <img class="work-logo" src="images/gm.png" alt="" />
+            <p>General Motors</p>
+          </div>
         </div>
-        <div class="experience-cell">
-          <img class="work-logo" src="images/tesla.png" alt="" />
-          <p>Tesla</p>
-        </div>
-        <div class="experience-cell">
-          <img class="work-logo" src="images/gm.png" alt="" />
-          <p>General Motors</p>
-        </div>
-      </div>
-      <p>
-        Check out my <a href="https://the-abe-train.github.io/">resume</a> for
-        more details.
-      </p>
-    </section>
-    <section id="Socials">
-      <h2 id="socials-title">Socials</h2>
-      <ul class="socials-icons">
-        <li>
-          <a
-            target="_blank"
-            class="icon-span"
-            href="https://twitter.com/theAbeTrain"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            class="icon-span"
-            href="https://www.linkedin.com/in/abe-train-81418714b/"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            class="icon-span"
-            href="https://github.com/the-abe-train"
-            ><i class="fab fa-github"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            class="icon-span"
-            href="https://www.reddit.com/user/AsteroidSvelte"
-            ><i class="fab fa-reddit"></i
-          ></a>
-        </li>
-      </ul>
-    </section>
-
+        <p>
+          Check out my <a href="https://the-abe-train.github.io/">resume</a> for
+          more details.
+        </p>
+      </section>
+      <section id="Socials">
+        <h2 id="socials-title">Socials</h2>
+        <ul class="socials-icons">
+          <li>
+            <a
+              target="_blank"
+              class="icon-span"
+              href="https://twitter.com/theAbeTrain"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="icon-span"
+              href="https://www.linkedin.com/in/abe-train-81418714b/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="icon-span"
+              href="https://github.com/the-abe-train"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              class="icon-span"
+              href="https://www.reddit.com/user/AsteroidSvelte"
+              ><i class="fab fa-reddit"></i
+            ></a>
+          </li>
+        </ul>
+      </section>
+    </main>
     <div id="Overlay" class="overlay-off">
       <div class="container">
         <form action="send" method="post">

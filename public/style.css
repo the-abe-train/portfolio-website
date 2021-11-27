@@ -10,6 +10,12 @@
   --y3: calc(var(--train-unit) * 5.5 + 4px);
 }
 
+@media screen and (max-width: 600px) {
+  :root {
+    --train-unit: 1.5rem;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   background: radial-gradient(80.99% 100% at 50% 0%, #00ff0a 0%, #36008e 100%),
@@ -34,19 +40,18 @@ html {
 body {
   font-family: "Noto Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
-  width: clamp(360px, 80vw, 65rem);
+  width: clamp(300px, 95vw, 65rem);
+  margin: 0 auto;
+}
+
+main {
+  width: 90%;
   margin: 0 auto;
 }
 
 h1 {
   font-size: 5rem;
   margin: 0;
-}
-
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 3rem;
-  }
 }
 
 h2 {
@@ -75,7 +80,7 @@ section {
 button {
   border-radius: 0.5em;
   border-width: 0.1em;
-  margin: 0 2rem;
+
   font-family: "NotoSans-SemiBold", "Noto Sans";
 }
 
@@ -84,12 +89,42 @@ button {
   margin: auto 0;
 }
 
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+    margin: 1em 0 0.5em 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 0.5em 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 0.5em 0 0.5em 0;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    margin: 0.5em 00;
+    font-weight: 600;
+  }
+
+  a {
+    color: black;
+  }
+
+  section {
+    margin: 1rem 0 3rem 0;
+  }
+}
+
 /* Navbar */
 
 nav {
   margin-left: auto;
   margin-right: 0;
-  margin: 1.5em 0 0 auto;
   height: 3em;
 }
 
@@ -101,6 +136,7 @@ ul {
 
 #nav-list {
   justify-content: right;
+  margin: 1.5em 0 0 auto;
 }
 
 li {
@@ -126,6 +162,56 @@ li > a:hover {
   font-weight: bold;
 }
 
+#hamburger {
+  display: none;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #hamburger {
+    display: block;
+    float: right;
+    padding: 1em;
+  }
+
+  .hamburger-open {
+    flex-direction: column;
+  }
+
+  .hamburger-closed {
+    display: none;
+  }
+
+  #nav-list {
+    /* display: flex; */
+    float: right;
+    background-color: white;
+    margin: 0;
+    padding: 0.25em 0;
+  }
+  
+  #nav-list li::after {
+    display: none;
+  }
+  
+  #nav-list li {
+    transition: display ease .3s, top ease .3s .3s, transform ease .3s;
+    font-size: 0.9rem;
+    padding: 0.25em;
+  }
+
+  nav {
+    position: fixed; /* Sit on top of the page content */
+    width: 20%; /* Full width (cover the whole page) */
+    top: 0;
+    right: 0;
+    z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  }
+  #hamburger:hover {
+    cursor: pointer;
+  }
+}
+
 /* Banner section */
 
 .banner-grid {
@@ -144,7 +230,6 @@ li > a:hover {
 
 #banner-btns {
   text-align: center;
-  /* margin-bottom: 2em; */
 }
 
 #banner-btns button {
@@ -152,6 +237,7 @@ li > a:hover {
   height: 5em;
   font-weight: 600;
   background-color: hsla(0, 0%, 100%, 0.548);
+  margin: 0 2rem;
 }
 
 #banner-btns button:hover {
@@ -296,12 +382,35 @@ li > a:hover {
   z-index: 3;
 }
 
+@media screen and (max-width: 800px) {
+  #train-column {
+    display: none;
+  }
+  .icon-line {
+    display: none;
+  }
+
+  .banner-grid {
+    margin: 0 auto;
+    display: block;
+  }
+
+  #banner-btns button {
+    margin: 0.75em 0.5em;
+  }
+}
+
 /* Portfolio Section */
 
 .portoflio-section {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 20% 50% 30%;
+}
+
+.project-title {
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
 }
 
 .project-logo {
@@ -322,22 +431,34 @@ li > a:hover {
   margin: 0.25rem;
 }
 
-/* .project-title {
+@media only screen and (max-width: 500px) {
+  .portoflio-section {
+    display: block;
+  }
+
+  .project-logo {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+  }
+  .project-details {
+    margin: 0.25rem;
+  }
+  .tech-logos {
+    padding-left: 1rem;
+  }
+  .tech-logo {
+    height: 3rem;
+    width: 3rem;
+    margin: 0.25rem;
+  }
 }
-.project-subtitle {
-  grid-column: 2 / 3;
-}
-.project-description {
-  grid-column: 3 / 4;
-} */
 
 /* Work Experience */
 
 #experience-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  margin: 0 2em;
+  grid-auto-flow: column;
 }
 
 .experience-cell {
@@ -355,7 +476,17 @@ li > a:hover {
   height: 5em;
 }
 
+@media only screen and (max-width: 600px) {
+  #experience-grid {
+    display: grid;
+    margin: 0 1em;
+    grid-template-columns: repeat(auto-fit, 8em);
+    grid-auto-flow: unset;
+  }
+}
+
 /* Socials */
+
 #socials-title {
   text-align: center;
 }
@@ -396,7 +527,7 @@ li > a:hover {
   background-color: white;
   border: 0.1em solid black;
   border-radius: 1em;
-  width: 20em;
+  width: clamp(1px, 75%, 20em);
 }
 
 form {
