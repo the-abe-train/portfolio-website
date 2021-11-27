@@ -34,7 +34,7 @@ html {
 body {
   font-family: "Noto Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
-  width: clamp(40rem, 80vw, 65rem);
+  width: clamp(360px, 80vw, 65rem);
   margin: 0 auto;
 }
 
@@ -68,16 +68,20 @@ a {
   color: black;
 }
 
-.section-break {
-  display: block;
-  margin: 1em auto;
-  text-align: center;
-  display: none;
-  /* width: 100%; */
-}
-
 section {
   margin: 1em 0 5em 0;
+}
+
+button {
+  border-radius: 0.5em;
+  border-width: 0.1em;
+  margin: 0 2rem;
+  font-family: "NotoSans-SemiBold", "Noto Sans";
+}
+
+.icon-span {
+  height: fit-content;
+  margin: auto 0;
 }
 
 /* Navbar */
@@ -100,7 +104,7 @@ ul {
 }
 
 li {
-  margin: 0 .75em;
+  margin: 0 0.75em;
   text-align: center;
 }
 
@@ -111,7 +115,6 @@ li > a {
   padding: 0.1em 0;
   text-decoration: none;
 }
-
 
 li::after {
   content: attr(title);
@@ -145,12 +148,8 @@ li > a:hover {
 }
 
 #banner-btns button {
-  border-radius: 1em;
-  border-width: 0.1em;
-  margin: 0 2rem;
   width: 10em;
   height: 5em;
-  font-family: "NotoSans-SemiBold", "Noto Sans";
   font-weight: 600;
   background-color: hsla(0, 0%, 100%, 0.548);
 }
@@ -162,7 +161,6 @@ li > a:hover {
 
 .btn-header {
   font-size: 1.2rem;
-  
 }
 
 #banner-left {
@@ -176,10 +174,8 @@ li > a:hover {
   color: black;
 }
 
-.icon-span {
+#Home .icon-span {
   font-size: var(--train-unit);
-  height: fit-content;
-  margin: auto 0;
 }
 
 .icon-line {
@@ -206,7 +202,7 @@ li > a:hover {
 
 .train-tracks {
   height: calc(var(--train-unit) * 7);
-  z-index: 0;
+  z-index: 1;
   position: absolute;
   top: 0;
   width: 30%;
@@ -218,7 +214,7 @@ li > a:hover {
   text-align: center;
   animation: train-up-down 7s infinite alternate ease-in-out;
   height: 10%;
-  z-index: 9;
+  z-index: 2;
   margin: 0 auto;
   position: relative;
 }
@@ -285,7 +281,7 @@ li > a:hover {
 }
 
 #train-icon {
-  z-index: 8;
+  z-index: 4;
   position: absolute;
   width: 80%;
   left: 10%;
@@ -297,7 +293,7 @@ li > a:hover {
   height: calc(var(--train-unit) * 0.825);
   background-color: white;
   margin: 0 auto;
-  z-index: 7;
+  z-index: 3;
 }
 
 /* Portfolio Section */
@@ -367,4 +363,73 @@ li > a:hover {
   margin: 0 auto;
   justify-content: center;
   padding: 0;
+}
+
+#Socials .icon-span {
+  font-size: var(--train-unit);
+}
+
+/* Overlay */
+
+#Overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.overlay-off {
+  display: none;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background-color: white;
+  border: 0.1em solid black;
+  border-radius: 1em;
+  width: 20em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em 0;
+}
+
+.far {
+  padding-right: 0.5em;
+}
+
+.entry {
+  margin: 0.4em 0;
+  border-width: 0.1em;
+  border-color: black;
+}
+
+.submit-btn {
+  width: fit-content;
+  align-self: center;
+  margin: 0.8em 0;
+}
+
+#Overlay .icon-span {
+  font-size: 1.5rem;
 }
