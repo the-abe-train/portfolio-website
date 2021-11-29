@@ -1,6 +1,11 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const sgMail = require('@sendgrid/mail');
+const dotenv = require('dotenv');
+
+dotenv.config();
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const app = express();
 const port = 3000;
@@ -8,9 +13,6 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// View engine setup
-
-// Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -18,9 +20,8 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 })
 
-app.post('/send', (req, res) => {
+app.post('/send', async (req, res) => {
   const output = `
-  <p>You have a new contact request</p>
   <h3>Contact Details</h3>
   <ul>
     <li>Name: ${req.body.name}</li>
@@ -28,8 +29,28 @@ app.post('/send', (req, res) => {
   </ul>
   <h3>Message</h3>
   <p>${req.body.message}</p>
-  `
-  "use strict";
+  `;
+
+  const msg = {
+    to: process.env.TO_EMAIL, // Change to your recipient
+    from: process.env.FROM_EMAIL, // Change to your verified sender
+    subject: 'Message from portfolio website',
+    text: `${req.body.message}`,
+    html: output
+  };
+
+  try {
+    await sgMail.send(msg);
+    console.log('email sent.')
+  } catch (e) {
+    console.log(e);
+  }
+
+  setTimeout(() => {
+    res.redirect('/');
+  }, 2000);
+
+
 })
 
 app.listen(port, () => {

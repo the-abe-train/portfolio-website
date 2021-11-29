@@ -1,4 +1,5 @@
 .vscode
+sendgrid.env
 
 # Logs
 logs

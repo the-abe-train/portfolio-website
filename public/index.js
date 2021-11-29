@@ -3,11 +3,13 @@ const overlay = document.querySelector('#Overlay');
 const navList = document.querySelector('#nav-list');
 const hamburger = document.querySelector('#hamburger');
 const body = document.querySelector('body');
+const forms = document.querySelectorAll('.form-container');
 
 
 function toggleOverlay(e) {
   if (e.target.closest('.container') === null) {
-    overlay.classList.toggle('overlay-off');
+    overlay.classList.toggle('hidden');
+    forms.forEach(form => form.classList.remove('hidden'));
   }
 }
 
@@ -25,7 +27,12 @@ function closeHamburger(e) {
   }
 }
 
+function closeForm(e) {
+  e.target.closest('.form-container').classList.toggle('hidden');
+}
+
 contactBtn.addEventListener('click', toggleOverlay);
 overlay.addEventListener('click', toggleOverlay);
 hamburger.addEventListener('click', toggleHamburger);
 body.addEventListener('click', closeHamburger);
+forms.forEach(form => form.addEventListener('submit', closeForm));

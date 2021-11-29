@@ -26,7 +26,7 @@
     </nav>
     <main>
       <section id="Home">
-        <h1><span class="small-header">The</span> Abe Train</h1>
+        <h1><span class="small-header">The</span> <strong>A</strong>be Train</h1>
         <div class="banner-grid">
           <div id="banner-left">
             <div class="banner-left-text">
@@ -53,6 +53,7 @@
                 <span>to mailing list</span>
               </button>
             </div>
+
           </div>
           <div id="train-column">
             <img
@@ -83,7 +84,11 @@
         <h2>Portfolio</h2>
         <div class="portoflio-section">
           <h3 class="project-title">Spotify Prewrapped</h3>
-          <img src="images/spotify.png" alt="spotify logo" class="project-logo" />
+          <img
+            src="images/spotify.png"
+            alt="spotify logo"
+            class="project-logo"
+          />
           <div class="project-details">
             <b>
               <p class="project-subtitle">
@@ -92,16 +97,24 @@
               </p>
             </b>
             <p class="project-description">
-              This was the first project I built as a solo web developer. In spite
-              of the simple output, I'm really proud of the result and I encourage
-              everyone to use and share it!
+              This was the first project I built as a solo web developer. In
+              spite of the simple output, I'm really proud of the result and I
+              encourage everyone to use and share it!
             </p>
           </div>
           <div class="project-technologies">
             <h4>Technologies</h4>
             <div class="tech-logos">
-              <img src="images/svelte.png" alt="svelte logo" class="tech-logo" />
-              <img src="images/vercel.png" alt="vercel logo" class="tech-logo" />
+              <img
+                src="images/svelte.png"
+                alt="svelte logo"
+                class="tech-logo"
+              />
+              <img
+                src="images/vercel.png"
+                alt="vercel logo"
+                class="tech-logo"
+              />
               <img
                 src="images/spotify.png"
                 alt="spotify logo"
@@ -168,11 +181,19 @@
             ></a>
           </li>
         </ul>
+        <div class="location">
+          <span>Based in Toronto</span>
+          <img
+            src="images/CA-Canada-Flag-icon.png"
+            alt="canada flag"
+          />
+        </div>
       </section>
     </main>
-    <div id="Overlay" class="overlay-off">
-      <div class="container">
+    <div id="Overlay" class="hidden">
+      <div class="container form-container">
         <form action="send" method="post">
+          <!-- <form onsubmit="myFunction(console.log('submit'))"> -->
           <div class="field" tabindex="1">
             <label for="name"> <i class="far fa-user"></i>Your Name </label>
             <input
@@ -206,8 +227,11 @@
               required
             ></textarea>
           </div>
-          <button class="submit-btn" type="submit">Send Me Message</button>
+          <button class="submit-btn" type="submit">Send me a message</button>
         </form>
+      </div>
+      <div id="thank-you" class="container">
+        <p>Thank you!</p>
       </div>
     </div>
   </body>

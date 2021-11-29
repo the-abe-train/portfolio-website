@@ -54,6 +54,11 @@ h1 {
   margin: 0;
 }
 
+strong {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: transparent;
+}
+
 h2 {
   font-size: 2.5rem;
   margin: 0.5em 0;
@@ -80,8 +85,11 @@ section {
 button {
   border-radius: 0.5em;
   border-width: 0.1em;
-
   font-family: "NotoSans-SemiBold", "Noto Sans";
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .icon-span {
@@ -189,13 +197,13 @@ li > a:hover {
     margin: 0;
     padding: 0.25em 0;
   }
-  
+
   #nav-list li::after {
     display: none;
   }
-  
+
   #nav-list li {
-    transition: display ease .3s, top ease .3s .3s, transform ease .3s;
+    transition: display ease 0.3s, top ease 0.3s 0.3s, transform ease 0.3s;
     font-size: 0.9rem;
     padding: 0.25em;
   }
@@ -242,7 +250,6 @@ li > a:hover {
 
 #banner-btns button:hover {
   background-color: white;
-  cursor: pointer;
 }
 
 .btn-header {
@@ -262,6 +269,21 @@ li > a:hover {
 
 #Home .icon-span {
   font-size: var(--train-unit);
+}
+
+.location {
+  text-align: center;
+  margin: 1em;
+}
+
+.location img {
+  height: 2em;
+  display: inline;
+  vertical-align: middle;
+}
+
+.location span {
+  display: inline;
 }
 
 .icon-line {
@@ -512,10 +534,14 @@ li > a:hover {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
   z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  transition: visibility 0s, opacity 0.25s ease-out;
 }
 
-.overlay-off {
-  display: none;
+.hidden {
+  /* display: none; */
+  /* border: none; */
+  visibility: hidden;
+  opacity: 0;
 }
 
 .container {
@@ -523,16 +549,30 @@ li > a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 2em;
   background-color: white;
   border: 0.1em solid black;
   border-radius: 1em;
-  width: clamp(1px, 75%, 20em);
+  transition: visibility 0s, opacity 0.25s linear;
+}
+
+.container p {
+  text-align: center;
+  padding: 1em;
 }
 
 form {
+  padding: 2em;
   display: flex;
   flex-direction: column;
+  width: clamp(1px, 75vw, 20em);
+}
+
+.form-container {
+  z-index: 7;
+}
+
+#thank-you {
+  z-index: 6;
 }
 
 textarea {
