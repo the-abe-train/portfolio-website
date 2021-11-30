@@ -4,7 +4,8 @@
   "description": "Abe's portfolio website.",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
