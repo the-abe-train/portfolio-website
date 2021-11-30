@@ -455,6 +455,10 @@ li > a:hover {
   grid-template-columns: 20% 50% 30%;
 }
 
+#Portfolio a {
+  text-decoration: none;
+}
+
 .project-title {
   grid-row: 1 / 2;
   grid-column: 1 / 4;
@@ -474,7 +478,6 @@ li > a:hover {
 }
 .tech-logo {
   height: 3rem;
-  width: 3rem;
   margin: 0.25rem;
 }
 
