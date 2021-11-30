@@ -8,7 +8,7 @@ dotenv.config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
