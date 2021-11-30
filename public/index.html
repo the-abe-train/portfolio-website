@@ -23,10 +23,11 @@
         <li title="Experience"><a href="#Experience">Experience</a></li>
         <li title="Socials"><a href="#Socials">Socials</a></li>
       </ul>
+      <button id="scroll-up-btn">Top</button>
     </nav>
     <main>
       <section id="Home">
-        <h1><span class="small-header">The</span> <strong>A</strong>be Train</h1>
+        <h1><span class="small-header">The</span> Abe Train</h1>
         <div class="banner-grid">
           <div id="banner-left">
             <div class="banner-left-text">
@@ -44,21 +45,20 @@
               </p>
             </div>
             <div id="banner-btns">
-              <button id="contact">
+              <button id="contact-btn" class="overlay-opener">
                 <span class="btn-header">Contact</span> <br />
                 <span>to hire or collab</span>
               </button>
-              <button id="subscribe">
+              <button id="subscribe-btn" class="overlay-opener">
                 <span class="btn-header">Subscribe</span> <br />
                 <span>to mailing list</span>
               </button>
             </div>
-
           </div>
           <div id="train-column">
             <img
               class="train-tracks"
-              src="images/train tracks 2.svg"
+              src="images/train tracks.svg"
               alt="train tracks"
             />
             <div class="icon-span" id="train-div">
@@ -183,17 +183,13 @@
         </ul>
         <div class="location">
           <span>Based in Toronto</span>
-          <img
-            src="images/CA-Canada-Flag-icon.png"
-            alt="canada flag"
-          />
+          <img src="images/canada-flag.png" alt="canada flag" />
         </div>
       </section>
     </main>
     <div id="Overlay" class="hidden">
-      <div class="container form-container">
+      <div id="contact-form-container" class="container form-container hidden">
         <form action="send" method="post">
-          <!-- <form onsubmit="myFunction(console.log('submit'))"> -->
           <div class="field" tabindex="1">
             <label for="name"> <i class="far fa-user"></i>Your Name </label>
             <input
@@ -211,7 +207,7 @@
             <input
               class="entry"
               name="email"
-              type="text"
+              type="email"
               placeholder="email@domain.com"
               required
             />
@@ -223,14 +219,21 @@
             <textarea
               class="entry"
               name="message"
-              placeholder="type here"
+              placeholder="Type here"
               required
             ></textarea>
           </div>
           <button class="submit-btn" type="submit">Send me a message</button>
         </form>
       </div>
-      <div id="thank-you" class="container">
+      <div id="subscribe-form-container" class="hidden">
+        <iframe
+          id="subscription-form"
+          frameborder="0"
+          src="https://cdn.forms-content.sg-form.com/4f1973a2-5167-11ec-8c8b-2e7ccf1b28b5"
+        ></iframe>
+      </div>
+      <div id="thank-you" class="container hidden">
         <p>Thank you!</p>
       </div>
     </div>

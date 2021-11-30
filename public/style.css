@@ -23,7 +23,7 @@ html {
     linear-gradient(301.28deg, #ff97c2 0%, #48dd9e 100%),
     linear-gradient(294.84deg, #5a60e4 0%, #f08c8c 100%),
     linear-gradient(52.29deg, #000000 0%, #00ff85 100%),
-    radial-gradient(100% 138.69% at 100% 0%, #0007a5 0%, #ff7a00 100%),
+    radial-gradient(100% 138.69% at 100% 0%, #357442 0%, #ff0000 100%),
     radial-gradient(70.41% 100% at 50% 0%, #d5b300 0%, #2200aa 100%);
   background-blend-mode: screen, screen, lighten, overlay, lighten, difference,
     normal;
@@ -55,7 +55,8 @@ h1 {
 }
 
 strong {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   color: transparent;
 }
 
@@ -140,6 +141,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  border-radius: 0.5em;
 }
 
 #nav-list {
@@ -175,7 +177,30 @@ li > a:hover {
   margin: 0;
 }
 
+#scroll-up-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 5;
+  border: none;
+  outline: none;
+  background-color: hsla(0, 0%, 100%, 0.548);
+  cursor: pointer;
+  padding: 1em;
+  border-radius: .5em;
+}
+
+#scroll-up-btn:hover {
+  background-color: white;
+}
+
 @media only screen and (max-width: 600px) {
+
+  #scroll-up-btn {
+    display: none;
+  }
+
   #hamburger {
     display: block;
     float: right;
@@ -560,14 +585,15 @@ li > a:hover {
   padding: 1em;
 }
 
-form {
+#Overlay form {
   padding: 2em;
+  margin: 0;
   display: flex;
   flex-direction: column;
   width: clamp(1px, 75vw, 20em);
 }
 
-.form-container {
+#Overlay .form-container {
   z-index: 7;
 }
 
@@ -577,6 +603,8 @@ form {
 
 textarea {
   resize: vertical;
+  font-family: "Noto Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
 }
 
 .field {
@@ -604,3 +632,39 @@ textarea {
 #Overlay .icon-span {
   font-size: 1.5rem;
 }
+
+#subscribe-form-container {
+  z-index: 10;
+  width: clamp(320px, 50%, 1080px);
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow: hidden;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
+iframe body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* @media only screen and (max-width: 360px) {
+  iframe {
+    width: 360px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+} */
