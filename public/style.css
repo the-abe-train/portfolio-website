@@ -469,17 +469,21 @@ li > a:hover {
   grid-column: 1 / 2;
   width: 100%;
   max-width: 9rem;
-  margin: auto auto;
+  margin: 2em 0;
 }
+
 .project-details {
   grid-column: 2 / 3;
   margin: 0.25rem;
 }
+
 .tech-logos {
   padding-left: 1rem;
 }
+
 .tech-logo {
-  height: 3rem;
+  max-height: 3rem;
+  max-width: 4rem;
   margin: 0.25rem;
 }
 
