@@ -449,13 +449,14 @@ li > a:hover {
 
 /* Portfolio Section */
 
-.portoflio-section {
+.portfolio-project {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 20% 50% 30%;
+  margin-bottom: 3em;
 }
 
-#Portfolio a {
+.portfolio-project a {
   text-decoration: none;
 }
 
@@ -481,8 +482,9 @@ li > a:hover {
   margin: 0.25rem;
 }
 
+
 @media only screen and (max-width: 500px) {
-  .portoflio-section {
+  .portfolio-project {
     display: block;
   }
 
