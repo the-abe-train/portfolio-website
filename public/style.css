@@ -468,6 +468,7 @@ li > a:hover {
 .project-logo {
   grid-column: 1 / 2;
   width: 100%;
+  max-width: 5rem;
   margin: auto auto;
 }
 .project-details {
@@ -492,6 +493,7 @@ li > a:hover {
     display: block;
     margin: 0 auto;
     width: 40%;
+    max-width: 9rem;
   }
   .project-details {
     margin: 0.25rem;
