@@ -468,7 +468,7 @@ li > a:hover {
 .project-logo {
   grid-column: 1 / 2;
   width: 100%;
-  max-width: 5rem;
+  max-width: 9rem;
   margin: auto auto;
 }
 .project-details {
