@@ -38,7 +38,6 @@ function closeHamburger(e) {
 }
 
 function closeOverlay(e) {
-  console.log(e.target.closest('form'));
   if (e.target.closest('form') === null) {
     overlay.classList.toggle('hidden');
     contactFrom.classList.add('hidden');

@@ -1,8 +1,6 @@
-/* All */
-
 :root {
   /* Margins */
-  --inner-margin: clamp(360px, 80%, 1000px);
+  --inner-margin: clamp(320px, 90%, 1000px);
 
   /* Train sizes */
   --train-unit: 2.5rem;
@@ -16,6 +14,7 @@
   /* Colours */
   --maroon: rgb(87, 2, 37);
   --beige: blanchedalmond;
+  --green: #014325;
 }
 
 @media screen and (max-width: 600px) {
@@ -24,27 +23,16 @@
   }
 }
 
-/* html {
-  scroll-behavior: smooth;
-  background: radial-gradient(80.99% 100% at 50% 0%, #00ff0a 0%, #36008e 100%),
-    radial-gradient(50% 123.47% at 50% 50%, #efe7c8 0%, #36008e 100%),
-    linear-gradient(301.28deg, #ff97c2 0%, #48dd9e 100%),
-    linear-gradient(294.84deg, #5a60e4 0%, #f08c8c 100%),
-    linear-gradient(52.29deg, #000000 0%, #00ff85 100%),
-    radial-gradient(100% 138.69% at 100% 0%, #357442 0%, #ff0000 100%),
-    radial-gradient(70.41% 100% at 50% 0%, #d5b300 0%, #2200aa 100%);
-  background-blend-mode: screen, screen, lighten, overlay, lighten, difference,
-    normal;
-} */
-
 html {
   background-color: var(--beige);
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Noto Sans", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
   margin: 0 auto;
+  background-color: var(--beige);
 }
 
 main {
@@ -52,31 +40,18 @@ main {
   margin: 0 auto;
 }
 
-p {
-  font-size: large;
-}
-
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-family: cooper-black-std, serif;
   font-weight: 200;
   font-style: normal;
 }
 
-h1 {
+h1,
+.big-header {
   font-size: 8rem;
   margin: 0;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
 }
 
 strong {
@@ -87,35 +62,49 @@ strong {
 
 h2 {
   font-size: 2.5rem;
-  margin: 0.5em 0;
+  margin: 0.5em 0 0em 0;
 }
 
 h3 {
   font-size: 2rem;
-  margin: 0.5em 0 0.5em 0;
+  margin: 1em 0 0 0;
+  color: var(--green);
 }
 
 h4 {
+  font-family: "Corben", cursive;
+  font-weight: bold;
   font-size: 1.5rem;
   margin: 1em;
+  color: var(--green);
 }
 
-a {
-  color: black;
+p a,
+p a:visited {
+  color: inherit;
 }
 
 section {
-  margin: 1em 0 5em 0;
+  margin: 2.5rem 0 2.5rem 0;
 }
 
 button {
   border-radius: 0.5em;
   border-width: 0.1em;
   font-family: "NotoSans-SemiBold", "Noto Sans";
+  padding: 1em;
+  font-weight: 600;
+  background-color: var(--beige);
+  opacity: 90%;
+  margin: 0 2rem;
+  width: fit-content;
+  align-self: center;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: white;
+  opacity: 100;
 }
 
 .icon-span {
@@ -123,26 +112,20 @@ button:hover {
   margin: auto 0;
 }
 
-@media screen and (max-width: 800px) {
-  h1 {
-    font-size: 5rem;
-    margin: 1em 0 0.5em 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   h1 {
     font-size: 3rem;
-    margin: 1em 0 0.5em 0;
+
+    /* margin: 1em 0 0.5em 0; */
   }
 
   h2 {
-    font-size: 2rem;
-    margin: 0.5em 0;
+    font-size: 2.5rem;
+    margin: 1em 0 0 0;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0.5em 0 0.5em 0;
   }
 
@@ -153,7 +136,7 @@ button:hover {
   }
 
   a {
-    color: black;
+    color: inherit;
   }
 
   section {
@@ -161,18 +144,17 @@ button:hover {
   }
 }
 
-.fas, .fab {
-  color: var(--maroon);
+.fas {
+  color: var(--beige);
 }
 
-/* Header */
+/* Banner */
 
 header {
-  background-color: var(--maroon);
-  color: blanchedalmond;
+  background-color: var(--beige);
+  color: var(--maroon);
   transform: translateX(-calc(100vw - var(--body-width)));
   padding: 1em 1em 0 1em;
-  margin-bottom: 4rem;
   overflow: hidden;
 }
 
@@ -183,11 +165,14 @@ header {
 
 #banner {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  width: 100%;
 }
 
 .flex-remainder {
   flex-grow: 1;
+  align-self: flex-end;
+  text-align: center;
 }
 
 #portrait {
@@ -196,17 +181,76 @@ header {
   filter: drop-shadow(0 25px 76px var(--beige));
   position: relative;
   max-height: 370px;
+  max-width: 370px;
 }
 
-nav {
-  font-family: 'Corben', cursive;
+#my-name {
+  font-family: cooper-black-std, serif;
+  font-weight: 200;
   font-style: normal;
-  font-weight: normal;
-  font-size: 1.125rem;
+  width: min-content;
+  max-width: 60%;
+}
+
+.small-header {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 5rem;
+  }
+  #portrait {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #portrait {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #banner {
+    display: block;
+    width: 100%;
+  }
+
+  #my-name {
+    width: auto;
+    max-width: 90%;
+  }
+
+  .small-header {
+    font-size: 2rem;
+  }
+
+  .flex-remainder {
+    width: 100%;
+    margin-bottom: -0.5em;
+    padding: 0;
+  }
+
+  #portrait {
+    max-width: 80%;
+    display: inline-block;
+  }
+}
+
+/* Navigation */
+
+#nav-list {
+  justify-content: right;
+  margin: 0;
 }
 
 nav a {
-  color: blanchedalmond;
+  font-family: "Corben", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  color: var(--green);
 }
 
 ul {
@@ -216,15 +260,9 @@ ul {
   border-radius: 0.5em;
 }
 
-#nav-list {
-  justify-content: right;
-  margin: 0;
-}
-
 li {
   margin: 0 0.75em;
   text-align: center;
-
 }
 
 /* Underline styles */
@@ -237,7 +275,7 @@ li > a {
 
 li::after {
   content: attr(title);
-  font-weight: bold;
+  font-weight: 900;
   color: transparent;
 }
 
@@ -260,12 +298,7 @@ li > a:hover {
   outline: none;
   background-color: hsla(0, 0%, 100%, 0.548);
   cursor: pointer;
-  padding: 1em;
   border-radius: 0.5em;
-}
-
-#scroll-up-btn:hover {
-  background-color: white;
 }
 
 @media only screen and (max-width: 600px) {
@@ -288,11 +321,10 @@ li > a:hover {
   }
 
   #nav-list {
-    /* display: flex; */
     float: right;
-    /* background-color: white; */
     margin: 0;
     padding: 0.25em 0;
+    background-color: white;
   }
 
   #nav-list li::after {
@@ -306,47 +338,47 @@ li > a:hover {
   }
 
   nav {
-    position: fixed; /* Sit on top of the page content */
-    width: 20%; /* Full width (cover the whole page) */
+    position: fixed;
+    width: 20%;
     top: 0;
     right: 0;
-    z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+    z-index: 5;
   }
   #hamburger:hover {
     cursor: pointer;
   }
 }
 
-/* Banner section */
+/* Call to action */
+
+#call-to-action {
+  background-color: var(--maroon);
+  color: var(--beige);
+  padding: 3em 0;
+  margin: 0;
+}
 
 .banner-grid {
-  width: 100%;
+  width: var(--inner-margin);
   display: grid;
   grid-template-columns: 60% 10% 10% 20%;
   grid-template-rows: calc(var(--train-unit) * 2) calc(var(--train-unit) * 3) calc(
       var(--train-unit) * 2
     );
-  margin: 1em 0;
-}
-
-.small-header {
-  font-size: 3rem;
+  margin: 0 auto;
 }
 
 #banner-btns {
   text-align: center;
 }
 
-#banner-btns button {
-  width: 10em;
-  height: 5em;
-  font-weight: 600;
-  background-color: hsla(0, 0%, 100%, 0.548);
-  margin: 0 2rem;
+.cta-btn {
+  padding: 0.7em;
 }
 
-#banner-btns button:hover {
-  background-color: white;
+#banner-btns span {
+  color: black;
+  opacity: 100;
 }
 
 .btn-header {
@@ -360,11 +392,11 @@ li > a:hover {
   justify-content: space-around;
 }
 
-#banner-left p a:visited {
-  color: black;
+#banner-left p {
+  font-size: large;
 }
 
-#Home .icon-span {
+#call-to-action .icon-span {
   font-size: var(--train-unit);
 }
 
@@ -406,7 +438,7 @@ li > a:hover {
 }
 
 .train-tracks {
-  color: var(--maroon);
+  color: var(--beige);
   height: calc(var(--train-unit) * 7);
   z-index: 1;
   position: absolute;
@@ -424,10 +456,6 @@ li > a:hover {
   margin: 0 auto;
   position: relative;
 }
-
-/* #train-div:hover {
-  animation-play-state: paused;
-} */
 
 @keyframes train-up-down {
   0% {
@@ -515,7 +543,8 @@ li > a:hover {
     display: block;
   }
 
-  #banner-btns button {
+  /* #banner-btns button { */
+  button {
     margin: 0.75em 0.5em;
   }
 }
@@ -526,7 +555,6 @@ li > a:hover {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 20% 50% 30%;
-  margin-bottom: 3em;
 }
 
 .portfolio-project a {
@@ -550,6 +578,10 @@ li > a:hover {
   margin: 0.25rem;
 }
 
+.project-description {
+  font-size: medium;
+}
+
 .tech-logos {
   padding-left: 1rem;
 }
@@ -563,6 +595,7 @@ li > a:hover {
 @media only screen and (max-width: 600px) {
   .portfolio-project {
     display: block;
+    margin: 1rem 0 2rem 0;
   }
 
   .project-logo {
@@ -589,6 +622,7 @@ li > a:hover {
 #experience-grid {
   display: grid;
   grid-auto-flow: column;
+  margin-top: 1em;
 }
 
 .experience-cell {
@@ -619,11 +653,18 @@ li > a:hover {
 
 #socials-title {
   text-align: center;
+  color: black;
+  display: none;
 }
 .socials-icons {
   margin: 0 auto;
   justify-content: center;
   padding: 0;
+}
+
+.fab {
+  color: black;
+  font-size: 2rem;
 }
 
 #Socials .icon-span {
@@ -633,21 +674,19 @@ li > a:hover {
 /* Overlay */
 
 #Overlay {
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
   transition: visibility 0s, opacity 0.25s ease-out;
 }
 
 .hidden {
-  /* display: none; */
-  /* border: none; */
   visibility: hidden;
   opacity: 0;
 }
@@ -678,6 +717,7 @@ li > a:hover {
 
 #Overlay .form-container {
   z-index: 7;
+  background-color: var(--beige);
 }
 
 #thank-you {
@@ -704,12 +744,6 @@ textarea {
   margin: 0.4em 0;
   border-width: 0.1em;
   border-color: black;
-}
-
-.submit-btn {
-  width: fit-content;
-  align-self: center;
-  margin: 0.8em 0;
 }
 
 #Overlay .icon-span {
@@ -742,12 +776,3 @@ iframe body {
   overflow-x: hidden;
   height: 100%;
 }
-
-/* @media only screen and (max-width: 360px) {
-  iframe {
-    width: 360px;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-} */

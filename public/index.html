@@ -53,7 +53,7 @@
             <i class="fa fa-bars"></i>
           </a>
           <ul id="nav-list" class="hamburger-closed">
-            <li title="Home"><a href="#Home">Home</a></li>
+            <li title="Home"><a href="#call-to-action">Home</a></li>
             <li title="Portfolio"><a href="#Portfolio">Portfolio</a></li>
             <li title="Experience"><a href="#Experience">Experience</a></li>
             <li title="Socials"><a href="#Socials">Socials</a></li>
@@ -61,72 +61,73 @@
           <button id="scroll-up-btn">Top</button>
         </nav>
         <div id="banner">
-          <!-- <h1>The Abe Train</h1> -->
-          <h1>
+          <div id="my-name">
             <span class="small-header">The</span>
-            Abe Train
-          </h1>
+            <h1>
+              Abe Train
+            </h1>
+          </div>
           <div class="flex-remainder">
             <img id="portrait" src="images/portrait.png" alt="" />
           </div>
         </div>
       </div>
-    </header>
-    <main>
-      <section id="Home">
-        <div class="banner-grid">
-          <div id="banner-left">
-            <div class="banner-left-text">
-              <p>Hey there! Thanks for coming to my website 👋</p>
-              <p>
-                I'm a
-                <a
-                  href="https://www.credly.com/badges/bc1d5730-f739-44ad-8024-b717f036cb56/public_url"
-                  target="_blank"
-                  rel="noopener"
-                  >cloud certified</a
-                >
-                <b>Full-stack Web Developer</b>. That means I design and develop
-                web apps from the ground up to reach people all over the world.
-                I'm always open to new challenges. Let's connect!
-              </p>
-            </div>
-            <div id="banner-btns">
-              <button id="contact-btn" class="overlay-opener">
-                <span class="btn-header">Contact</span> <br />
-                <span>to hire or collab</span>
-              </button>
-              <button id="subscribe-btn" class="overlay-opener">
-                <span class="btn-header">Subscribe</span> <br />
-                <span>to mailing list</span>
-              </button>
-            </div>
+    </header >
+    <section id="call-to-action">
+      <div class="banner-grid">
+        <div id="banner-left">
+          <div class="banner-left-text">
+            <p>Hey there! Thanks for coming to my website 👋</p>
+            <p>
+              I'm a
+              <a
+                href="https://www.credly.com/badges/bc1d5730-f739-44ad-8024-b717f036cb56/public_url"
+                target="_blank"
+                rel="noopener"
+                >cloud certified</a
+              >
+              <b>Full-stack Web Developer</b>. That means I design and develop
+              web apps from the ground up to reach people all over the world.
+              I'm always open to new challenges. Let's connect!
+            </p>
           </div>
-          <div id="train-column">
-            <img
-              class="train-tracks"
-              src="images/train tracks.svg"
-              alt="train tracks"
-            />
-            <div class="icon-span" id="train-div">
-              <i class="fas fa-train" id="train-icon"></i>
-              <div id="train-bg"></div>
-            </div>
+          <div id="banner-btns">
+            <button id="contact-btn" class="cta-btn overlay-opener">
+              <span class="btn-header">Contact</span> <br />
+              <span>to hire or collab</span>
+            </button>
+            <button id="subscribe-btn" class="cta-btn overlay-opener">
+              <span class="btn-header">Subscribe</span> <br />
+              <span>to mailing list</span>
+            </button>
           </div>
-          <span class="icon-span icon-line" id="server">
-            <i class="fas fa-server"></i>
-            <span class="icon-name">Server</span>
-          </span>
-          <span class="icon-span icon-line">
-            <i class="fas fa-desktop"></i>
-            <span class="icon-name">Desktop</span>
-          </span>
-          <span class="icon-span icon-line">
-            <i class="fas fa-database"></i>
-            <span class="icon-name">Database</span>
-          </span>
         </div>
-      </section>
+        <div id="train-column">
+          <img
+            class="train-tracks"
+            src="images/train tracks.svg"
+            alt="train tracks"
+          />
+          <div class="icon-span" id="train-div">
+            <i class="fas fa-train" id="train-icon"></i>
+            <div id="train-bg"></div>
+          </div>
+        </div>
+        <span class="icon-span icon-line">
+          <i class="fas fa-desktop"></i>
+          <span class="icon-name">Client</span>
+        </span>
+        <span class="icon-span icon-line" id="server">
+          <i class="fas fa-server"></i>
+          <span class="icon-name">Server</span>
+        </span>
+        <span class="icon-span icon-line">
+          <i class="fas fa-database"></i>
+          <span class="icon-name">Database</span>
+        </span>
+      </div>
+    </section>
+    <main>
       <section id="Portfolio">
         <h2>Portfolio</h2>
         <div class="portfolio-project">
@@ -258,7 +259,7 @@
         </p>
       </section>
       <section id="Socials">
-        <h2 id="socials-title">Socials</h2>
+        <h3 id="socials-title">Socials</h3>
         <ul class="socials-icons">
           <li>
             <a
