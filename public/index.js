@@ -67,5 +67,5 @@ body.addEventListener('click', closeHamburger);
 
 contactBtn.addEventListener('click', openContactForm);
 contactFrom.addEventListener('submit', closeForm);
-subscribeBtn.addEventListener('click', openSubForm);
+// subscribeBtn.addEventListener('click', openSubForm);
 overlay.addEventListener('click', closeOverlay);

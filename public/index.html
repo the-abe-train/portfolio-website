@@ -61,18 +61,20 @@
           <button id="scroll-up-btn">Top</button>
         </nav>
         <div id="banner">
-          <div id="my-name">
+          <!-- <div id="my-name">
             <span class="small-header">The</span>
-            <h1>
-              Abe Train
-            </h1>
-          </div>
+            <h1>Abe Train</h1>
+          </div> -->
+          <span id="my-name" class="small-header">
+            The
+            <h1>Abe Train</h1>
+          </span>
           <div class="flex-remainder">
             <img id="portrait" src="images/portrait.png" alt="" />
           </div>
         </div>
       </div>
-    </header >
+    </header>
     <section id="call-to-action">
       <div class="banner-grid">
         <div id="banner-left">
@@ -97,8 +99,10 @@
               <span>to hire or collab</span>
             </button>
             <button id="subscribe-btn" class="cta-btn overlay-opener">
-              <span class="btn-header">Subscribe</span> <br />
-              <span>to mailing list</span>
+              <a href="/subscribe">
+                <span class="btn-header">Subscribe</span> <br />
+                <span>to mailing list</span>
+              </a>
             </button>
           </div>
         </div>
@@ -142,16 +146,16 @@
           <div class="project-details">
             <b>
               <p class="project-subtitle">
-                Don't wait for Spotify Wrapped to find out your most listened to
+                Don't wait for Spotify Wrapped for insights into your favourite
                 tracks and artists!
               </p>
             </b>
             <p class="project-description">
-              This was the first project I built as a solo web developer. I was
-              inspired by my own desire to better track how I listen to my
-              music. This project uses some very user-friendly tools for new
-              developers, such as the front-end framework Svelte and the Spotify
-              API.
+              I was inspired by my own desire to better track my own music
+              habits. In just 2 clicks, users can call on the Spotify API to
+              take a look at their most listened-to tracks and artists from 3
+              different time ranges. Fun fact: This was the first project I
+              built as an independent web developer!
             </p>
           </div>
           <div class="project-technologies">
@@ -164,51 +168,57 @@
                 class="tech-logo"
               />
               <img
-                src="images/vercel.png"
-                alt="vercel logo"
-                title="Vercel"
-                class="tech-logo"
-              />
-              <img
                 src="images/spotify.png"
                 alt="spotify logo"
                 title="Spotify API"
+                class="tech-logo"
+              />
+              <img
+                src="images/vercel.png"
+                alt="vercel logo"
+                title="Vercel"
                 class="tech-logo"
               />
             </div>
           </div>
         </div>
         <div class="portfolio-project">
-          <h3 class="project-title">Portfolio website</h3>
-          <a href="https://the-abe-train.com"
+          <h3 class="project-title">Dynamic Gradient Generator</h3>
+          <a href="https://dynamicgradients.com"
             ><img
-              src="images/favicon_io/android-chrome-512x512.png"
-              alt="spotify logo"
+              src="images/corner-gradient-3.png"
+              alt="dynamic gradients"
               class="project-logo"
           /></a>
-
           <div class="project-details">
             <b>
               <p class="project-subtitle">
-                A showcase of some of my favourite projects and a platform for
-                people to connect with me!
+                A tool for web developers to design and export dynamic gradients
+                in CSS!
               </p>
             </b>
             <p class="project-description">
-              While this may appear to be nothing more than a front-end project,
-              the page you are currently viewing is served to you by an Express
-              server hosted on Heroku. The server also provides the API that
-              sends an email directly to me from this site, so if you have any
-              questions about how it was made, you know what to do!
+              This tool was inspired by a fellow web developer's
+              <a href="https://www.gradient-animator.com/">existing project</a>.
+              The Dynamic Gradient Generator lets users design beautiful
+              gradients using custom colours, scroll speed, and scroll
+              direction. The output CSS code can be copied directly into your
+              next project, or, with the GitHub API, be published as a Gist.
             </p>
           </div>
           <div class="project-technologies">
             <h4>Technologies</h4>
             <div class="tech-logos">
               <img
-                src="images/vanilla-js.png"
-                alt="vanilla js"
-                title="Vanilla JavaScript"
+                src="images/react.png"
+                alt="react"
+                title="ReactJS"
+                class="tech-logo"
+              />
+              <img
+                src="images/github.png"
+                alt="github logo"
+                title="GitHub"
                 class="tech-logo"
               />
               <img
@@ -223,10 +233,57 @@
                 title="Cloudflare"
                 class="tech-logo"
               />
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-project">
+          <h3 class="project-title">Portfolio website</h3>
+          <a href="https://the-abe-train.com"
+            ><img
+              src="images/favicon_io/android-chrome-512x512.png"
+              alt="spotify logo"
+              class="project-logo"
+          /></a>
+          <div class="project-details">
+            <b>
+              <p class="project-subtitle">
+                A showcase of some of my favourite projects and a platform for
+                people to connect with me!
+              </p>
+            </b>
+            <p class="project-description">
+              This is, of course, the groovy site you're currently on. The
+              server that's hosting this website is also hosting a SendGrid API,
+              meaning that you can send me an email directly to me from this
+              site, or sign up to my upcoming newsletter. So if you ever want to
+              connect on a cool project, you know what to do!
+            </p>
+          </div>
+          <div class="project-technologies">
+            <h4>Technologies</h4>
+            <div class="tech-logos">
+              <img
+                src="images/vanilla-js.png"
+                alt="vanilla js"
+                title="Vanilla JavaScript"
+                class="tech-logo"
+              />
               <img
                 src="images/sendgrid-seeklogo.com.svg"
                 alt="sendgrid logo"
                 title="SendGrid"
+                class="tech-logo"
+              />
+              <img
+                src="images/heroku.png"
+                alt="heroku logo"
+                title="Heroku"
+                class="tech-logo"
+              />
+              <img
+                src="images/cloudflare-seeklogo.com.svg"
+                alt="cloudflare logo"
+                title="Cloudflare"
                 class="tech-logo"
               />
             </div>
@@ -310,6 +367,7 @@
     </main>
     <div id="Overlay" class="hidden">
       <div id="contact-form-container" class="container form-container hidden">
+        <button id="escape-form">X</button>
         <form action="send" method="post">
           <div class="field" tabindex="1">
             <label for="name"> <i class="far fa-user"></i>Your Name </label>
