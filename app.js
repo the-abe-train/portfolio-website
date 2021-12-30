@@ -10,11 +10,16 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname, 'public')));
+const public = path.join(__dirname, 'public');
+app.use(express.static(public));
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.get('/subscribe', (req, res) => {
+  res.sendFile(public + '/subscribe.html')
+})
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
